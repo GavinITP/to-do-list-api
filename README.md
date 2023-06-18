@@ -95,7 +95,7 @@ The API will now be running at http://localhost:3000.
     "description": "Task 2",
     "dueDate": "2023-06-25",
     "order": 2,
-    "list": "listId1"
+    "list": "listId2"
   }
 ]
 ```
@@ -112,8 +112,7 @@ The API will now be running at http://localhost:3000.
 "order": 3
 }
 Response:
-json
-Copy code
+```json
 {
 "_id": "newListId",
 "title": "New List",
