@@ -111,6 +111,8 @@ The API will now be running at http://localhost:3000.
 "title": "New List",
 "order": 3
 }
+```
+
 - Response:
 ```json
 {
