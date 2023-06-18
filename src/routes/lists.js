@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const List = require("../models/List");
 
+router.get("/lists", (req, res) => {
+  // Get all lists
+});
+
+router.get("/lists/:listId/tasks", (req, res) => {
+  // Get all tasks belonging to a specific list
+});
+
 router.post("/lists", (req, res) => {
   // Create a new list
 });

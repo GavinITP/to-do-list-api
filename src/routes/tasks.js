@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const Task = require("../models/Task");
 
+router.get("/tasks", (req, res) => {
+  // Get all tasks
+});
+
+router.get("/tasks/:taskId", (req, res) => {
+  // Get a specific task based on id
+});
+
 router.post("/tasks", (req, res) => {
   // Create a new task
 });
