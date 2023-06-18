@@ -1,6 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config();
+const dotenv = require("dotenv");
+
+const taskRoutes = require("./routes/tasks");
+const listRoutes = require("./routes/lists");
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
@@ -20,10 +25,9 @@ mongoose
     console.error("MongoDB connection error:", error);
   });
 
-app.get("/", (_req, res) => {
-  res.json({ success: true });
-});
+app.use("/api", taskRoutes);
+app.use("/api", listRoutes);
 
 app.listen(PORT, () => {
-  console.log("running...");
+  console.log("Server running on port", PORT);
 });
